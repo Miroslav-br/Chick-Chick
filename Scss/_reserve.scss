@@ -1,0 +1,148 @@
+
+.reserve {
+  padding: 62px 0;
+
+	&__fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 72px;
+    gap: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+	}
+
+	&__fieldset-sup {
+    flex-basis: 100%;
+    margin-bottom: 24px;
+	}
+	&__form-container {
+    margin-bottom: 40px;
+	}
+
+	&__item {
+    margin-bottom: 8px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+	}
+
+	&__legend {
+    font-size: 22px;
+    line-height: 100%;
+    text-transform: uppercase;
+    flex-basis: 100%;
+	}
+
+	&__list {
+    padding-left: 24px; 
+    list-style: decimal;
+    line-height: 1.5;
+    margin-bottom: 72px;
+	}
+
+	&__title {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+	}
+
+}
+
+.radio {
+
+	&__input {
+    position: absolute;
+    appearance: none;
+
+  &:disabled + .radio__label{
+    opacity: 0.3;
+  }
+
+    &:active + .radio__label,
+    &:checked + .radio__label{
+      color: #241D1C;
+      background: #F6F3E3;
+
+    }
+	}
+
+	&__label {
+    display: inline-block;
+    padding: 16px 24px;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    border: 1px #BFBDB2 solid;
+    border-radius: 36px;
+
+    &:hover:not(:disabled) {
+      color: #EFE7BE;
+    }
+
+    &-spec {
+      position: relative;
+      padding-left: 52px;
+      // background-size: 36px;
+      // background-position: 8px;
+      // background-repeat: no-repeat;
+      // background-image: var(--bg-image);
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-image: var(--bg-image);
+        background-size: cover;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+	}
+
+}
+
+@media (max-width: 768px) {
+  .reserve {
+    &__title {
+      font-size: 38px;
+    }
+
+    &__legend {
+      font-size: 22px;
+    }
+  }
+  
+  
+  .radio {
+    &__label {
+      padding: 12px 16px;
+
+      &-spec {
+        padding-left: 48px;
+      }
+    }
+
+    &__input {
+      position: absolute;
+      appearance: none;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .reserve {
+    &__title {
+      font-size: 22px;
+    }
+
+    &__legend {
+      font-size: 16px;
+    }
+  }
+}

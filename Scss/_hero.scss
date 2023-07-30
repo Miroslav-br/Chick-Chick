@@ -1,0 +1,147 @@
+.hero {
+	padding: 62px 0;
+
+	&__title {
+		font-size: 54px;
+		text-transform: uppercase;
+		max-width: 904px;
+		margin-bottom: 36px;
+	}
+  &__slider {
+    min-height: 372px;
+  }
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+
+  // &__container {
+  //   display: none;
+  // }
+
+  &__list {
+    display: flex;
+    margin: 0 -16px;
+  }
+
+  &__item {
+    padding: 0 16px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 25%;
+
+    &_active {
+      max-width: 50%;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    bottom: calc(100% * (200px / 580px));
+    height: 8px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 64px;
+
+    &:hover {
+      opacity: .8;
+    }
+    &:active {
+      opacity: .6;
+    }
+	}
+	&__arrow-left {
+    left: 8%;
+    background-image: url("./img/Arrow 3.png");
+	}
+	&__arrow-right {
+    right: 8%;
+    background-image: url("./img/Arrow 2.png");
+  }
+}
+
+@media (max-width: 1024px) {
+	.hero {
+		padding: 40px 0;
+
+		&__title {
+			font-size: 40px;
+			margin-bottom: 24px;
+		}
+	}
+
+  .slider {
+    &__item {
+      max-width: 30%;
+
+      &_active {
+        max-width: 40%;
+      }
+    }
+
+    &__arrow {
+      bottom: 12%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+	.hero {
+		padding: 40px 0;
+
+		&__title {
+			font-size: 40px;
+			margin-bottom: 24px;
+		}
+	}
+
+  .slider {
+    &__item {
+      padding: 0 16px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      max-width: 25%;
+  
+      &_active {
+        max-width: 50%;
+      }
+    }
+     
+    &__arrow {
+      width: 40px;
+      bottom: calc(100% * (113px / 320px));
+    }
+  }
+}
+
+@media (max-width: 560px) {
+	.hero {
+		padding: 32px 0;
+
+		&__title {
+      font-size: 24px;
+			margin-bottom: 16px;
+      max-width: 420px;
+		}
+	}
+
+  .slider {
+    padding-bottom: 20px;
+
+    &__item {
+      max-width: 100%;
+    }
+
+    &__arrow {
+      bottom: 0px;
+    }
+
+    &__arrow-left{
+      left: 0px;
+    }
+    &__arrow-right{
+      right: 0px;
+    }
+  }
+}
